@@ -47,13 +47,8 @@ namespace Game10003
             Window.ClearBackground(Color.White);
             Vector2 Mice = Raylib.GetMousePosition();
             //Store mouse position and draw line for trail effect
-            if (Raylib.IsMouseButtonUp(MouseButton.Left))
-            {
-                linepositions[lineelements] = Mice;
-                lineelements++;
-                lineelements = 2;
-                
-            }
+             linepositions[0] = Mice;
+
             Draw.FillColor = Color.Red;
             for (int i = 0; i < linepositions.Length; i++)
             {
@@ -86,6 +81,7 @@ namespace Game10003
                 Draw.Circle(20, ycoordinates[0], pelletRadius);
 
             }
+            linepositions[1] = Raylib.GetMousePosition();
             DrawHouse(500, 500);
         }
         
