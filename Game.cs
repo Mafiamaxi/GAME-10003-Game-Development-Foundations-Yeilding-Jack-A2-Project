@@ -51,7 +51,7 @@ namespace Game10003
             {
                 linepositions[lineelements] = Mice;
                 lineelements++;
-                lineelements %= 2;
+                lineelements = 2;
                 
             }
             Draw.FillColor = Color.Red;
